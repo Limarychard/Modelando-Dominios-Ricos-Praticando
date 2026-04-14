@@ -33,7 +33,7 @@ namespace GlowUp.Domain.Entities
             AddNotifications(
                 new Contract<Clientes>()
                     .Requires()
-                    .IsNotNull(Ficha, "Cliente.Idade", "A Ficha Técnica deve ser preenchida.")
+                    .IsNotNull(Ficha, "Cliente.Ficha", "A Ficha Técnica deve ser preenchida.")
                     .IsFalse(IdadeCompativel(Idade, DataNacimento), "Cliente.Idade", "A idade não confere com a Data de Nascimento.")
             );
         }
